@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		202ACC022651054200DECB53 /* ChooseSiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202ACC012651054200DECB53 /* ChooseSiteView.swift */; };
-		20BA535F26525102001382EA /* TabularRegressor.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 20BA535E26525102001382EA /* TabularRegressor.mlmodel */; };
+		20BA53662652A038001382EA /* TabularRegressor.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 20BA53652652A038001382EA /* TabularRegressor.mlmodel */; };
 		20EE280C26481E69001006C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EE280B26481E69001006C2 /* AppDelegate.swift */; };
 		20EE280E26481E69001006C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EE280D26481E69001006C2 /* SceneDelegate.swift */; };
 		20EE281026481E69001006C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EE280F26481E69001006C2 /* ContentView.swift */; };
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		202ACC012651054200DECB53 /* ChooseSiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseSiteView.swift; sourceTree = "<group>"; };
-		20BA535E26525102001382EA /* TabularRegressor.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = TabularRegressor.mlmodel; path = ../../TabularRegressor.mlmodel; sourceTree = "<group>"; };
+		20BA53652652A038001382EA /* TabularRegressor.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TabularRegressor.mlmodel; sourceTree = "<group>"; };
 		20EE280826481E69001006C2 /* AQI_Queryer_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AQI_Queryer_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20EE280B26481E69001006C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20EE280D26481E69001006C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		20EE280A26481E69001006C2 /* AQI_Queryer_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				20BA535E26525102001382EA /* TabularRegressor.mlmodel */,
+				20BA53652652A038001382EA /* TabularRegressor.mlmodel */,
 				202ACC0D265108F000DECB53 /* Model */,
 				20EE28202648204C001006C2 /* View */,
 				20EE280B26481E69001006C2 /* AppDelegate.swift */,
@@ -189,7 +189,7 @@
 				20EE281026481E69001006C2 /* ContentView.swift in Sources */,
 				20EE28272648283B001006C2 /* aqiData.swift in Sources */,
 				202ACC022651054200DECB53 /* ChooseSiteView.swift in Sources */,
-				20BA535F26525102001382EA /* TabularRegressor.mlmodel in Sources */,
+				20BA53662652A038001382EA /* TabularRegressor.mlmodel in Sources */,
 				20EE282B26482960001006C2 /* Header.swift in Sources */,
 				20EE282226482079001006C2 /* Background.swift in Sources */,
 			);

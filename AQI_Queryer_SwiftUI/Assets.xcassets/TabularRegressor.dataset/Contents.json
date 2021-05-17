@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "TabularRegressor.mlmodel",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -7,18 +7,24 @@
 
 import SwiftUI
 
+
+
 struct HeaderView: View {
 
+    
+    let data: AQI
+
+    
     var body: some View {
+     
         VStack {
-            Text("CITY").font(.title).fontWeight(.light)
-            Text("SiteName").font(.title).foregroundColor(.gray)        }
+            Text("\(data.County ?? "--")").font(.title)
+            Text("\(data.SiteName ?? "--")").font(.title).fontWeight(.light)
+ 
+        }
+    
     }
 }
 
 
-struct Header_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
-    }
-}
+

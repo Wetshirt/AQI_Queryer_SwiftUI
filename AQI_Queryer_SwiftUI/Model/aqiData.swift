@@ -34,4 +34,14 @@ struct AQI: Codable{
         case PublishTime
     }
     
+    init() {
+        self.SiteName = "--"
+        self.County = "--"
+        self.AQI = "--"
+        self.PM25 = "--"
+        self.Status = "--"
+        self.PublishTime = "--"
+
+    }
+    
 }

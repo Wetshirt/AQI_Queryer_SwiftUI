@@ -8,20 +8,21 @@
 import SwiftUI
 
 struct CurrentAQIView: View {
-
+    
+    let data: AQI
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
 
                 
-                Text("Status")
+                Text("\(data.Status ?? "--")")
                     .font(.title)
                     .fontWeight(.light)
                 }.padding(0)
             
             HStack {
-                Text("100")
+                Text("\(data.AQI ?? "--")")
                     .font(.system(size: 120))
                     .fontWeight(.ultraLight)
                 
@@ -29,13 +30,13 @@ struct CurrentAQIView: View {
                     HStack {
                         Text("PM25")
                         Spacer()
-                        Text("70")
+                        Text("\(data.PM25 ?? "--")")
                         }.padding(.bottom, 1)
                     
                     HStack {
                         Text("Publish Date")
                         Spacer()
-                        Text("Date")
+                        Text("\(data.PublishTime ?? "--")")
                         }.padding(.bottom, 1)
                     
                     }.font(.caption)

@@ -13,7 +13,6 @@ struct HeaderView: View {
 
     
     let data: AQI
-
     
     var body: some View {
      

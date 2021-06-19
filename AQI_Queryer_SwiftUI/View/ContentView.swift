@@ -11,11 +11,16 @@ import SwiftUI
 
 struct ContentView: View {
 
+    @ObservedObject var weatherViewModel = WeatherViewModel()
+    
     @State var sitename : String = "新竹"
     @State var aqiArray : SearchResponse?
     @State var aqi : AQI?
     
+    @State var coordinate = "lon=120.972075&lat=24.805619"  //新竹吧？
+    
     @State private var isShowingSheet = false
+    
     
     
     var body: some View {
@@ -26,17 +31,23 @@ struct ContentView: View {
             BackgroundView()
             
             //確保資料有被載入
-            if let aqi = aqi {
+            if let aqi = aqi{
                 VStack {
 
                     HeaderView(data:aqi)
+                    LocationAndTemperatureHeaderView(data: weatherViewModel.currentWeather)
                     
-                    Button("Changed?") {
+                    Button("Change?") {
                         isShowingSheet.toggle()
                     }
                     .sheet(isPresented: $isShowingSheet, onDismiss: didDismiss) {
-                        ChooseSiteView(showSheetView: $isShowingSheet, sitename: $sitename, data : aqiArray!)
+                        ChooseSiteView(showSheetView: $isShowingSheet, sitename: $sitename, coordinate: $coordinate, data : aqiArray!)
                     }
+                    DailyWeatherCellView(data: weatherViewModel.todayWeather)
+                    Rectangle().frame(height: CGFloat(1))
+                    
+                    HourlyWeatherView(data: weatherViewModel.hourlyWeathers)
+                    Rectangle().frame(height: CGFloat(1))
                          
                     Spacer()
                     
@@ -45,7 +56,7 @@ struct ContentView: View {
                     
 
                     
-                    Spacer()
+                    //Spacer()
                     
 
                     PredictAQIView(data:aqi)
@@ -121,6 +132,8 @@ extension ContentView {
         // Handle the dismissing action.
         print(sitename)
         self.getData(sitename: sitename)
+        self.weatherViewModel.SetData(coordinate: self.coordinate)
+        
     }
 }
 

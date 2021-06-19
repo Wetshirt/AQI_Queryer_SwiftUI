@@ -11,7 +11,9 @@ struct ChooseSiteView: View {
     
     @Binding var showSheetView: Bool
     @Binding var sitename: String
+    @Binding var coordinate : String
     let data : SearchResponse
+
     
     var body: some View {
         NavigationView {
@@ -19,6 +21,7 @@ struct ChooseSiteView: View {
             List(data.records, id:\.SiteName) { index in
                 Button("\(index.SiteName ?? "")") {
                     self.sitename = index.SiteName ?? ""
+                    self.coordinate = "lon=" + (index.Longitude ?? "") + "&lat=" + (index.Latitude ?? "");
                     
                 }
             }

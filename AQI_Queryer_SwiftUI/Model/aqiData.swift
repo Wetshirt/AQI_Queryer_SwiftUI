@@ -23,6 +23,8 @@ struct AQI: Codable{
     let PM25: String?
     let Status: String?
     let PublishTime:String?
+    let Longitude: String?
+    let Latitude: String?
     
     //Parse 出來的是PM2.5
     enum CodingKeys: String, CodingKey {
@@ -32,6 +34,8 @@ struct AQI: Codable{
         case PM25 = "PM2.5"
         case Status
         case PublishTime
+        case Longitude
+        case Latitude
     }
     
     init() {
@@ -41,6 +45,8 @@ struct AQI: Codable{
         self.PM25 = "--"
         self.Status = "--"
         self.PublishTime = "--"
+        self.Longitude = "__"
+        self.Latitude = "__"
 
     }
     

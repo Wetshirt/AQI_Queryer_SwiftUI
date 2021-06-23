@@ -4,7 +4,7 @@
 ## 109-2 IOS 期末專案
 &emsp;
 
-<div style="width: 1000px; height 600px;"><img src="screenshot_intro.PNG" width="50%" height="50%"></div>
+<div style="width: 1000px; height 600px;"><img src="screenshot_intro.PNG" width="100%" height="100%"></div>
 
 &emsp;
 &emsp;
@@ -24,4 +24,4 @@
 
 預測AQI的部分由coreML的tabular regression 訓練而成
 
-<div style="width: 1000px; height 600px;"><img src="tabularmodel.PNG" width="50%" height="50%"></div>
+<div style="width: 1000px; height 600px;"><img src="tabularmodel.PNG" width="100%" height="100%"></div>
